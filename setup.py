@@ -8,7 +8,7 @@ PROJECTNAME="oneNeuron_pypi"
 
 setuptools.setup(
     name=f"{PROJECTNAME}-{USERNAME}",
-    version="0.0.1",
+    version="0.0.2",
     author=USERNAME,
     author_email="rbrishabh76@example.com",
     description="It is a Pereceptron Implementation",
@@ -23,11 +23,14 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "src"},
+    package_dir={"src": ["oneNeuronPerceptron","utils"]},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.7",
     install_requires=[
         "numpy",
-        "tqdm"
+        "tqdm",
+        "matplotlib",
+        "pandas",
+        "joblib",
     ],
 )
